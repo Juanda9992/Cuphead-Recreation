@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Cuphead Recreation.sln"
+    "dotnet.defaultSolution": "Cuphead-Recreation.sln"
 }
