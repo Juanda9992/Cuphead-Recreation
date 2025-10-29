@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
     private bool isDashing;
+    private bool canDash = true;
+
     public static event Action<bool> OnPlayerGroundStatus;
     public static event Action<bool> OnPlayerDashStatusUpdated;
 
@@ -49,6 +51,11 @@ public class PlayerMovement : MonoBehaviour
         playerRb.velocity = new Vector2(playerAxis * movementSpeed, playerRb.velocity.y);
 
         canJump = Physics2D.OverlapCircle(jumpDetectionPos.position, jumpDetectionRadius, groundLayer);
+
+        if(!canDash && canJump)
+        {
+            canDash = true;
+        }
     }
     private void Jump()
     {
@@ -60,8 +67,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dash()
     {
-        if (!isDashing)
+        if (!isDashing && canDash)
         {
+            canDash = false;
             isDashing = true;
             playerRb.velocity = new Vector2(dashSpeed * playerAxis, 0);
             playerRb.gravityScale = 0;
