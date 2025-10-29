@@ -23,8 +23,10 @@ public class PlayerMovement : MonoBehaviour
 
     public static event Action<bool> OnPlayerGroundStatus;
     public static event Action<bool> OnPlayerDashStatusUpdated;
+    public static event Action<Vector2> OnPlayerAimUpdated;
 
-    private float playerAxis;
+    private float playerHorizontalAxis;
+    private float playerVerticalAxis;
     private float defaultGravity;
 
     void Start()
@@ -37,7 +39,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        playerAxis = InputActionManager.instance.GetHorizontalAxisAction().ReadValue<float>();
+        playerHorizontalAxis = InputActionManager.instance.GetHorizontalAxisAction().ReadValue<float>();
+        playerVerticalAxis = InputActionManager.instance.GetVerticalAxisAction().ReadValue<float>();
+
+        OnPlayerAimUpdated?.Invoke(new Vector2(playerHorizontalAxis,playerVerticalAxis));
 
         OnPlayerGroundStatus?.Invoke(!canJump);
     }
@@ -48,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return; 
         }
-        playerRb.velocity = new Vector2(playerAxis * movementSpeed, playerRb.velocity.y);
+        playerRb.velocity = new Vector2(playerHorizontalAxis * movementSpeed, playerRb.velocity.y);
 
         canJump = Physics2D.OverlapCircle(jumpDetectionPos.position, jumpDetectionRadius, groundLayer);
 
@@ -71,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canDash = false;
             isDashing = true;
-            playerRb.velocity = new Vector2(dashSpeed * playerAxis, 0);
+            playerRb.velocity = new Vector2(dashSpeed * playerHorizontalAxis, 0);
             playerRb.gravityScale = 0;
             OnPlayerDashStatusUpdated?.Invoke(true);
             StartCoroutine("ResetDash");

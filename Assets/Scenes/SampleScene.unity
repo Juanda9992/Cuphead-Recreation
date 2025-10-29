@@ -170,6 +170,7 @@ MonoBehaviour:
   horizontalAxis: {fileID: -8785519096020312035, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   jumpAction: {fileID: -4250006935703231956, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   dashAction: {fileID: 9075124008616032107, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
+  shootAction: {fileID: 3938179000117520498, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
 --- !u!1 &174985227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1180,7 @@ GameObject:
   - component: {fileID: 1612647813}
   - component: {fileID: 1612647814}
   - component: {fileID: 1612647815}
+  - component: {fileID: 1612647816}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -1372,6 +1374,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 1612647813}
+--- !u!114 &1612647816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612647808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2ec1323347c4742bc759b9768a88cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1744075992
 GameObject:
   m_ObjectHideFlags: 0
