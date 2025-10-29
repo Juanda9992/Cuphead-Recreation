@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputActions: {fileID: -944628639613478452, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   horizontalAxis: {fileID: -8785519096020312035, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
+  verticalAxis: {fileID: 7263419938933404001, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   jumpAction: {fileID: -4250006935703231956, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   dashAction: {fileID: 9075124008616032107, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   shootAction: {fileID: 3938179000117520498, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
