@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputActions: {fileID: -944628639613478452, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   horizontalAxis: {fileID: -8785519096020312035, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
+  jumpAction: {fileID: -4250006935703231956, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
 --- !u!1 &174985227
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +208,37 @@ Transform:
   - {fileID: 1387958360}
   - {fileID: 1284868305}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &248455066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248455067}
+  m_Layer: 0
+  m_Name: Ground_Detection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &248455067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248455066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.608, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1612647810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1217,7 +1249,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 248455067}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1612647811
@@ -1235,7 +1268,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1317,6 +1350,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRb: {fileID: 1612647811}
   movementSpeed: 7
+  jumpDetectionPos: {fileID: 248455067}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  jumpDetectionRadius: 0.2
+  jumpHeight: 8
 --- !u!114 &1612647815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,7 +1379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1744075994}
   - component: {fileID: 1744075993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
