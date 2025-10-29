@@ -5,7 +5,7 @@ public class InputActionManager : MonoBehaviour
 {
     [SerializeField] private InputActionAsset inputActions;
 
-    [SerializeField] private InputActionReference horizontalAxis, jumpAction;
+    [SerializeField] private InputActionReference horizontalAxis, jumpAction, dashAction;
     public static InputActionManager instance;
     void Awake()
     {
@@ -22,5 +22,10 @@ public class InputActionManager : MonoBehaviour
     public InputAction GetJumpAction()
     {
         return jumpAction;
+    }
+
+    public InputAction GetDashAction()
+    {
+        return dashAction;
     }
 }

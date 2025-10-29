@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,13 +14,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpDetectionRadius;
     [SerializeField] private float jumpHeight;
     private bool canJump;
+
+    [Header("Dash Settings")]
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashTime;
+    private bool isDashing;
     public static event Action<bool> OnPlayerGroundStatus;
 
     private float playerAxis;
+    private float defaultGravity;
 
     void Start()
     {
+        defaultGravity = playerRb.gravityScale;
+
         InputActionManager.instance.GetJumpAction().started += _=>Jump();
+        InputActionManager.instance.GetDashAction().started += _=>Dash();
     }
 
     void Update()
@@ -31,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(isDashing)
+        {
+            return; 
+        }
         playerRb.velocity = new Vector2(playerAxis * movementSpeed, playerRb.velocity.y);
 
         canJump = Physics2D.OverlapCircle(jumpDetectionPos.position, jumpDetectionRadius, groundLayer);
@@ -41,5 +55,23 @@ public class PlayerMovement : MonoBehaviour
         {
             playerRb.velocity = new Vector2(playerRb.velocity.x, jumpHeight);
         }
+    }
+
+    private void Dash()
+    {
+        if (!isDashing)
+        {
+            isDashing = true;
+            playerRb.velocity = new Vector2(dashSpeed * playerAxis, 0);
+            playerRb.gravityScale = 0;
+            StartCoroutine("ResetDash");
+        }
+    }
+    
+    private IEnumerator ResetDash()
+    {
+        yield return new WaitForSeconds(dashTime);
+        isDashing = false;
+        playerRb.gravityScale = defaultGravity;
     }
 }
