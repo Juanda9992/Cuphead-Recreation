@@ -16,6 +16,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "VerticalAxis",
+                    "type": "Value",
+                    "id": "1070d004-6448-4ff5-b988-5f52d82b624e",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Jump_Action",
                     "type": "Button",
                     "id": "0b3b8a6b-47e3-4524-90ef-a0e3bf45d65f",
@@ -28,6 +37,15 @@
                     "name": "Dash",
                     "type": "Button",
                     "id": "4cee57b3-6345-4c0d-83d0-b07f9a33868c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shoot Action",
+                    "type": "Button",
+                    "id": "ef31f397-fd6d-47b2-bd80-fd42b1592afd",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -114,28 +132,6 @@
                 },
                 {
                     "name": "",
-                    "id": "30b96cd3-1a2f-4605-a5ab-f95c39ba1643",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump_Action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "619c9ae9-0995-4c57-a4ad-1dadb1ca67ed",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump_Action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "e28ee907-0816-4afa-989b-e3790314b605",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -144,6 +140,94 @@
                     "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7083297f-9ef2-41fb-b41f-48d6c90cb0ad",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3bd8f94b-7da9-4e8e-af83-892e7e346e24",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "W and S",
+                    "id": "88b671dc-d3aa-4bf7-b627-ebda3072ca80",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalAxis",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "9460626f-6e79-484e-a3a5-f36153dbab0c",
+                    "path": "<Mouse>/scroll/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalAxis",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "76ac7e23-f6f2-4593-88d1-f6544f9b6367",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalAxis",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Up and Down Arrows",
+                    "id": "282eb1f6-3496-49f1-ae4d-4a919fe483de",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalAxis",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "cb228086-1e7a-4af9-9cde-8358aaed8eb4",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalAxis",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "9ce47602-df89-4e45-8784-55c35e0e8736",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalAxis",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
