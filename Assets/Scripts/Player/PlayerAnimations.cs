@@ -11,6 +11,7 @@ public class PlayerAnimations : MonoBehaviour
         InputActionManager.instance.GetHorizontalAxisAction().canceled += x => SetMovingAnimation(x, false);
 
         PlayerMovement.OnPlayerGroundStatus += SetJumpAnimation;
+        PlayerMovement.OnPlayerDashStatusUpdated += SetDashAnimation;
     }
 
     private void SetMovingAnimation(InputAction.CallbackContext callbackContext, bool isMoving)
@@ -23,5 +24,10 @@ public class PlayerAnimations : MonoBehaviour
     public void SetJumpAnimation(bool value)
     {
         playerAnimator.SetBool("Air", value);
+    }
+
+    private void SetDashAnimation(bool value)
+    {
+        playerAnimator.SetBool("Dash", value);
     }
 }

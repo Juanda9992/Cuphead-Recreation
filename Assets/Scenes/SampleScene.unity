@@ -169,6 +169,7 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   horizontalAxis: {fileID: -8785519096020312035, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
   jumpAction: {fileID: -4250006935703231956, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
+  dashAction: {fileID: 9075124008616032107, guid: 58ca860cf8f01c44ea2348f28aa4fdc8, type: 3}
 --- !u!1 &174985227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1357,8 @@ MonoBehaviour:
     m_Bits: 64
   jumpDetectionRadius: 0.2
   jumpHeight: 8
+  dashSpeed: 15
+  dashTime: 0.25
 --- !u!114 &1612647815
 MonoBehaviour:
   m_ObjectHideFlags: 0

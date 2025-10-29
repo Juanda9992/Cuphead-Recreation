@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashTime;
     private bool isDashing;
     public static event Action<bool> OnPlayerGroundStatus;
+    public static event Action<bool> OnPlayerDashStatusUpdated;
 
     private float playerAxis;
     private float defaultGravity;
@@ -64,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
             isDashing = true;
             playerRb.velocity = new Vector2(dashSpeed * playerAxis, 0);
             playerRb.gravityScale = 0;
+            OnPlayerDashStatusUpdated?.Invoke(true);
             StartCoroutine("ResetDash");
         }
     }
@@ -73,5 +75,6 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
         playerRb.gravityScale = defaultGravity;
+        OnPlayerDashStatusUpdated?.Invoke(false);
     }
 }
