@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public static event Action<bool> OnPlayerDashStatusUpdated;
     public static event Action<Vector2> OnPlayerAimUpdated;
 
+    public float lastAxis = 1;
     private float playerHorizontalAxis;
     private float playerVerticalAxis;
     private float defaultGravity;
@@ -41,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerHorizontalAxis = InputActionManager.instance.GetHorizontalAxisAction().ReadValue<float>();
         playerVerticalAxis = InputActionManager.instance.GetVerticalAxisAction().ReadValue<float>();
+        lastAxis = playerHorizontalAxis == 0 ? lastAxis : playerHorizontalAxis;
 
         OnPlayerAimUpdated?.Invoke(new Vector2(playerHorizontalAxis,playerVerticalAxis));
 
@@ -76,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canDash = false;
             isDashing = true;
-            playerRb.velocity = new Vector2(dashSpeed * playerHorizontalAxis, 0);
+            playerRb.velocity = new Vector2(dashSpeed * lastAxis, 0);
             playerRb.gravityScale = 0;
             OnPlayerDashStatusUpdated?.Invoke(true);
             StartCoroutine("ResetDash");
