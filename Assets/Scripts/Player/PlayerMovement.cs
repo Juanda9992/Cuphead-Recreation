@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public static event Action<bool> OnPlayerDashStatusUpdated;
     public static event Action<Vector2> OnPlayerAimUpdated;
 
-    public float lastAxis = 1;
+    public static float lastAxis = 1;
     private float playerHorizontalAxis;
     private float playerVerticalAxis;
     private float defaultGravity;
