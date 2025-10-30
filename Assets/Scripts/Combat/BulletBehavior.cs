@@ -9,7 +9,8 @@ public class BulletBehavior : MonoBehaviour
     void Start()
     {
         transform.localScale = new Vector2(PlayerMovement.lastAxis, 1);
-        bulletRb.velocity = new Vector2(PlayerMovement.lastAxis * bulletSpeed, 0);
+        bulletRb.velocity = new Vector2(PlayerMovement.playerHorizontalAxis, PlayerMovement.playerVerticalAxis) * bulletSpeed;
+        Debug.Log(new Vector2(PlayerMovement.playerHorizontalAxis, PlayerMovement.playerVerticalAxis));
     }
 
 }
