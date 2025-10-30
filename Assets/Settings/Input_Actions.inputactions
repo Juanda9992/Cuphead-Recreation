@@ -177,7 +177,7 @@
                 {
                     "name": "negative",
                     "id": "9460626f-6e79-484e-a3a5-f36153dbab0c",
-                    "path": "<Mouse>/scroll/right",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
