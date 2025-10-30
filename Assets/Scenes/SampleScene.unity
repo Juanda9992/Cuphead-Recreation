@@ -1387,6 +1387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa2ec1323347c4742bc759b9768a88cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 160877392282030400, guid: 8c73ce4182e24b340b5b071af95b5713, type: 3}
+  timeBetweenBullets: 1
+  generateBulletPos: {fileID: 0}
 --- !u!1 &1744075992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,6 +1558,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 174985228}
-  - {fileID: 1612647810}
   - {fileID: 1744075994}
   - {fileID: 840494619}
+  - {fileID: 1612647810}
