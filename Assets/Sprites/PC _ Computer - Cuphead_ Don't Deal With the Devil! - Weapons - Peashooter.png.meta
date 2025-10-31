@@ -131,7 +131,7 @@ TextureImporter:
         width: 54
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 75
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
         width: 157
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 148
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
         width: 143
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 159
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
         width: 136
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
         width: 122
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,6 +286,132 @@ TextureImporter:
       bones: []
       spriteID: 98a7d2bdc91539645bce70c085292ec6
       internalID: -699457224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1822
+        width: 79
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f5dfa7142215846828ae2b7914045f
+      internalID: 1310921769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_9
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1802
+        width: 91
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff65b78439d04c643b6cd837e1684653
+      internalID: -1428268503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_10
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1728
+        width: 162
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463c411a6bbe75b4f8cf06a9da63c9c2
+      internalID: 1930289692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_11
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1652
+        width: 230
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5de8d55656157488d9db491f4d02e0
+      internalID: -1732356151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_12
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1621
+        width: 254
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b9f97801d43dd44812582a41f8ad41
+      internalID: 1410052116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_13
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1612
+        width: 257
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db74fc91e4253404eb1cf73580cb0c4c
+      internalID: -796803879
       vertices: []
       indices: 
       edges: []
@@ -303,12 +429,18 @@ TextureImporter:
     nameFileIdTable:
       PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_0: -1348093222
       PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_1: 121122317
+      PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_10: 1930289692
+      PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_11: -1732356151
+      PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_12: 1410052116
+      PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_13: -796803879
       PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_2: 2117637649
       PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_3: -1002023410
       PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_4: -413253218
       PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_5: 1825388503
       PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_6: -1615571492
       PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_7: -699457224
+      PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_8: 1310921769
+      PC _ Computer - Cuphead_ Don't Deal With the Devil! - Weapons - Peashooter_9: -1428268503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
