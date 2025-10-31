@@ -165,7 +165,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f42211a872a924fa030a841e128222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletDamage: 4
   bulletExplosion: {fileID: 4660464622217330910, guid: c92a25de2062def47820e5256c35424a, type: 3}
   bulletRb: {fileID: 9062609012962429791}
   bulletSpeed: 20
